@@ -1,6 +1,6 @@
 const maxChar = require('./index');
 
-describe.skip('MaxChar', () => {
+describe('MaxChar', () => {
   it('maxChar function exists', () => {
     expect(typeof maxChar).toEqual('function');
   });
