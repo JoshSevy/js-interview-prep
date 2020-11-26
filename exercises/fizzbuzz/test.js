@@ -1,6 +1,6 @@
 const fizzBuzz = require('./index');
 
-describe.skip('FizzBuzz', () => {
+describe('FizzBuzz', () => {
   it('fizzBuzz function is defined', () => {
     expect(fizzBuzz).toBeDefined();
   });
