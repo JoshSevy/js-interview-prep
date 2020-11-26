@@ -1,6 +1,6 @@
 const anagrams = require('./index.js');
 
-describe.skip('Anagrams', () => {
+describe('Anagrams', () => {
   it('anagrams function exists', () => {
     expect(typeof anagrams).toEqual('function');
   });
