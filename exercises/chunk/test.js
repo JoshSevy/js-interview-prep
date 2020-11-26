@@ -1,6 +1,6 @@
 const chunk = require('./index');
 
-describe.skip('Chunk', () => {
+describe('Chunk', () => {
   it('function chunk exists', () => {
     expect(typeof chunk).toEqual('function');
   });
