@@ -1,6 +1,6 @@
 const reverseInt = require('./index');
 
-describe.skip('Reverse Int', () => {
+describe('Reverse Int', () => {
  it('ReverseInt function exists', () => {
     expect(reverseInt).toBeDefined();
   });
