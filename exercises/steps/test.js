@@ -1,6 +1,6 @@
 const steps = require('./index');
 
-describe.skip('Steps', () => {
+describe('Steps', () => {
   beforeEach(() => {
     jest.spyOn(console, 'log');
   });
