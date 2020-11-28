@@ -1,6 +1,6 @@
 const vowels = require('./index');
 
-describe.skip('Vowels', () => {
+describe('Vowels', () => {
   it('Vowels is a function', () => {
     expect(typeof vowels).toEqual('function');
   });
