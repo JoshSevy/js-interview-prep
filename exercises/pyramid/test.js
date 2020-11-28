@@ -1,6 +1,6 @@
 const pyramid = require('./index');
 
-describe.skip('Pyramid', () => {
+describe('Pyramid', () => {
   beforeEach(() => {
     jest.spyOn(console, 'log');
   });
