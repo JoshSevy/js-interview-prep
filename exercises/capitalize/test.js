@@ -1,6 +1,6 @@
 const capitalize = require('./index');
 
-describe.skip('Capitalize', () => {
+describe('Capitalize', () => {
   it('Capitalize is a function', () => {
     expect(typeof capitalize).toEqual('function');
   });
