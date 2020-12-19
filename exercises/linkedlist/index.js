@@ -38,7 +38,11 @@ class LinkedList {
   }
 
   getLast() {
-
+    let currentHead = this.head;
+    while (currentHead.next !== null) {
+      currentHead = currentHead.next
+    }
+    return currentHead;
   }
 }
 
