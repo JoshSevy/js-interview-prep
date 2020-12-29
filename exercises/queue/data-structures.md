@@ -22,3 +22,4 @@ Another important operation of a queue is getting the element at the front calle
 
 The name *queue* comes from the analogy to a queue of customers at a bank. The customer who comes first will be served first, and the one who comes later is queued at the end of the queue and will be served later.
 
+![Bank Queue](../../assets/bank_queue.jpeg)
