@@ -46,9 +46,81 @@ To avoid the duplication work caused by the branching, we can wrap the method in
 1. check *memo* to see if we can avoid computing the answer for any given input, and
 2. save the results of any calculation to *memo*.
 
+```java
+import java.util.Map;
+import java.util.HashMap;
+
+class Fibber {
+
+    private Map<Integer, Integer> memo = new HashMap<>();
+
+    public int fib(int n) {
+
+        if (n < 0) {
+            throw new IllegalArgumentException(
+                "Index was negative. No such thing as a negative index in a series.");
+
+        // base cases
+        } else if (n == 0 || n == 1) {
+            return n;
+        }
+
+        // see if we've already calculated this
+        if (memo.containsKey(n)) {
+            System.out.printf("grabbing memo[%d]\n", n);
+            return memo.get(n);
+        }
+
+        System.out.printf("computing fib(%d)\n", n);
+        int result = fib(n - 1) + fib(n - 2);
+
+        // memoize
+        memo.put(n, result);
+
+        return result;
+    }
+}
+
+```
+
+```bash
+# output of new Fibber().fib(5)
+computing fib(5)
+computing fib(4)
+computing fib(3)
+computing fib(2)
+grabbing memo[2]
+grabbing memo[3]
+5
+```
+
+
+For this instance we are going to do this with an function rather than creating a class.
+
+
 ```js
 
-//Placeholder for example
+//!recursive w/ memoization
+function memoize(fn) {
+  const cache = {};
+  return function(...args) {
+    if (cache[args]) return cache[args];
+
+    const result = fn.apply(this, args);
+    cache[args] = result;
+
+    return result;
+  };
+}
+
+//!recursive solution
+function slowFib(n) {
+  if (n < 2) return n;
+  return fib(n - 1) + fib(n - 2);
+}
+
+const fib = memoize(slowFib);
+
 
 ```
 
