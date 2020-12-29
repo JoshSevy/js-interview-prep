@@ -12,7 +12,7 @@
 //!recursive w/ memoization
 function memoize(fn) {
   const cache = {};
-  return function(...args) {
+  return (...args) => {
     if (cache[args]) return cache[args];
 
     const result = fn.apply(this, args);

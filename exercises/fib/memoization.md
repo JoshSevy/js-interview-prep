@@ -121,7 +121,6 @@ function slowFib(n) {
 
 const fib = memoize(slowFib);
 
-
 ```
 
 ```bash
