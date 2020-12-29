@@ -9,13 +9,26 @@
 //   fib(4) === 3
 
 
-//recursive solution
-function fib(n) {
+//!recursive w/ memoization
+function memoize(fn) {
+  const cache = {};
+  return (...args) => {
+    if (cache[args]) return cache[args];
+
+    const result = fn.apply(this, args);
+    cache[args] = result;
+
+    return result;
+  };
+}
+
+//!recursive solution
+function slowFib(n) {
   if (n < 2) return n;
   return fib(n - 1) + fib(n - 2);
 }
 
-
+const fib = memoize(slowFib);
 
 //!iterative solution
 // function fib(n) {

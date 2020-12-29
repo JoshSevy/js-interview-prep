@@ -1,10 +1,10 @@
 const Queue = require('./index');
 
-describe.skip('Queue', () => {
+describe('Queue', () => {
   it('Queue is a class', () => {
     expect(typeof Queue.prototype.constructor).toEqual('function');
   });
-  
+
   it('can add elements to a queue', () => {
     const q = new Queue();
     expect(() => {
