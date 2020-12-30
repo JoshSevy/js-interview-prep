@@ -1,11 +1,11 @@
 const Stack = require('./index');
 
 
-describe.skip('Stack', () => {
+describe('Stack', () => {
   it('Stack is a class', () => {
     expect(typeof Stack.prototype.constructor).toEqual('function');
   });
-  
+
   it('stack can add and remove items', () => {
     const s = new Stack();
     s.push(1);
@@ -13,7 +13,7 @@ describe.skip('Stack', () => {
     s.push(2);
     expect(s.pop()).toEqual(2);
   });
-  
+
   it('stack can follows first in, last out', () => {
     const s = new Stack();
     s.push(1);
@@ -23,7 +23,7 @@ describe.skip('Stack', () => {
     expect(s.pop()).toEqual(2);
     expect(s.pop()).toEqual(1);
   });
-  
+
   it('peek returns the first element but doesnt pop it', () => {
     const s = new Stack();
     s.push(1);
