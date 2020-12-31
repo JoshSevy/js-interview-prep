@@ -1,17 +1,17 @@
 const Queue = require('./index');
 
-describe.skip('Q Forms', () => {
+describe('Q Forms', () => {
   it('Queue is a class', () => {
     expect(typeof Queue.prototype.constructor).toEqual('function');
   });
-  
+
   it('can add elements to a queue', () => {
     const q = new Queue();
     expect(() => {
       q.add(1);
     }).not.toThrow();
   });
-  
+
   it('can remove elements from a queue', () => {
     const q = new Queue();
     expect(() => {
@@ -19,7 +19,7 @@ describe.skip('Q Forms', () => {
       q.remove();
     }).not.toThrow();
   });
-  
+
   it('Order of elements is maintained', () => {
     const q = new Queue();
     q.add(1);
@@ -30,7 +30,7 @@ describe.skip('Q Forms', () => {
     expect(q.remove()).toEqual(3);
     expect(q.remove()).toEqual(undefined);
   });
-  
+
   it('peek returns, but does not remove, the first value', () => {
     const q = new Queue();
     q.add(1);
