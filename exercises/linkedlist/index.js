@@ -65,9 +65,13 @@ class LinkedList {
       return;
     }
 
-
-
-
+    let previous = this.head;
+    let node = this.head.next;
+    while (node.next !== null) {
+      previous = node;
+      node = node.next;
+    }
+    previous.next = null;
   }
 
   clear() {
