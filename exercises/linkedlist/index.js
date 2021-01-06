@@ -49,10 +49,22 @@ class LinkedList {
 
   getLast() {
     let currentHead = this.head;
+    if (!currentHead) return null;
     while (currentHead.next !== null) {
       currentHead = currentHead.next
     }
     return currentHead;
+  }
+
+  getAt(index) {
+    let counter = 0;
+    let node = this.head;
+    while (node) {
+      if (counter === index) return node;
+      counter++;
+      node = node.next;
+    }
+    return null;
   }
 
   removeLast() {
