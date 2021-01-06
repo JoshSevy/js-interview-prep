@@ -23,6 +23,16 @@ class LinkedList {
     }
   }
 
+  removeFirst() {
+    if (this.head.next) {
+      const newHead = this.head.next;
+      this.head = null;
+      this.head = newHead;
+    } else {
+      this.head = null;
+    }
+  }
+
   size() {
     let count = 0;
     let currentHead = this.head;
@@ -44,6 +54,27 @@ class LinkedList {
     }
     return currentHead;
   }
+
+  removeLast() {
+    if (!this.head) {
+      return
+    }
+
+    if (!this.head.next) {
+      this.head = null;
+      return;
+    }
+
+
+
+
+  }
+
+  clear() {
+    this.head = null;
+  }
+
+
 }
 
 module.exports = { Node, LinkedList };
