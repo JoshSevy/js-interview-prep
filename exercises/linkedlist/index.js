@@ -43,11 +43,17 @@ class LinkedList {
     }
   }
 
-  insertAt(index) {
-    if (!this.head) return;
-    if (index === 0) {
-      this.head = new Node(data, this.head.next);
+  insertAt(data, index) {
+    if (!this.head) {
+      this.head = new Node(data);
+      return;
     }
+
+    if (index === 0) {
+      this.head = new Node(data, this.head);
+      return;
+    }
+
   }
 
   getFirst() {
