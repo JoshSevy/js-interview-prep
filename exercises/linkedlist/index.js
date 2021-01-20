@@ -54,6 +54,10 @@ class LinkedList {
       return;
     }
 
+    const previous = this.getAt(index - 1);
+    const node = new Node(data, previous.next);
+    previous.next = node;
+
   }
 
   getFirst() {
