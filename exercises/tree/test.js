@@ -2,7 +2,7 @@ const T = require('./index');
 const Node = T.Node;
 const Tree = T.Tree;
 
-describe.skip('Node', () => {
+describe('Node', () => {
   it('Node is a constructor', () => {
     expect(typeof Node.prototype.constructor).toEqual('function');
   });
@@ -29,7 +29,7 @@ describe.skip('Node', () => {
   });
 });
 
-describe.skip('Tree', () => {
+describe('Tree', () => {
   it('starts empty', () => {
     const t = new Tree();
     expect(t.root).toEqual(null);
