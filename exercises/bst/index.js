@@ -28,6 +28,9 @@ class Node {
     } else if (data > this.data) {
       this.right = new Node(data);
     }
+  }
+
+  contains(value) {
 
   }
 }
