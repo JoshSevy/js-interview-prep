@@ -30,8 +30,16 @@ class Node {
     }
   }
 
-  contains(value) {
+  contains(data) {
+    if (this.data === data) {
+      return this;
+    }
 
+    if (this.data < data && this.right) {
+      return this.right.contains(data);
+    } else if (this.data > data && this.left) {
+      this.left.contains(data);
+    }
   }
 }
 
