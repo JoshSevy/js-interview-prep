@@ -38,8 +38,10 @@ class Node {
     if (this.data < data && this.right) {
       return this.right.contains(data);
     } else if (this.data > data && this.left) {
-      this.left.contains(data);
+      return this.left.contains(data);
     }
+
+    return null;
   }
 }
 
