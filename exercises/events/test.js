@@ -1,6 +1,6 @@
 const Events = require('./index');
 
-describe.skip('Events', () => {
+describe('Events', () => {
   it("Events can be registered then triggered", () => {
     const events = new Events();
 
