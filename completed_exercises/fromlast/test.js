@@ -3,11 +3,11 @@ const L = require('./linkedlist');
 const List = L.LinkedList;
 const Node = L.Node;
 
-test.skip('fromLast is a function', () => {
+test('fromLast is a function', () => {
   expect(typeof fromLast).toEqual('function');
 });
 
-test.skip('fromLast returns the node n elements from the end', () => {
+test('fromLast returns the node n elements from the end', () => {
   const l = new List();
 
   l.insertLast('a');
