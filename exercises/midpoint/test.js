@@ -3,11 +3,11 @@ const L = require('./linkedlist');
 const Node = L.Node;
 const LinkedList = L.LinkedList;
 
-test.skip('Midpoint is a function', () => {
+test('Midpoint is a function', () => {
   expect(typeof midpoint).toEqual('function');
 });
 
-describe.skip('Midpoint returns the middle node of an odd numbered list', () => {
+describe('Midpoint returns the middle node of an odd numbered list', () => {
   test('when the list has 3 elements', () => {
     const l = new LinkedList();
     l.insertLast('a');
@@ -27,7 +27,7 @@ describe.skip('Midpoint returns the middle node of an odd numbered list', () => 
   });
 });
 
-describe.skip('Midpoint returns the middle node of an even numbered list', () => {
+describe('Midpoint returns the middle node of an even numbered list', () => {
   test('when the list has 2 elements', () => {
     const l = new LinkedList();
     l.insertLast('a');
